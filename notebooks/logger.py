@@ -1,6 +1,7 @@
 import logging
 import os
 import yaml
+from datetime import datetime
 
 
 def get_logger(file_name: str) -> logging.Logger:
@@ -14,6 +15,9 @@ def get_logger(file_name: str) -> logging.Logger:
 
         """
 
+        header = f"\n{'-'*60}\n--- Logger session started at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ---\n{'-'*60}"
+        print(header)
+        
         try:
             # load the logs dir path
             with open("config.yaml", "r") as f:
