@@ -1,2 +1,9 @@
+parameter:
+  learning_rate: 0.1605192295064776
+  max_depth: 5
+  n_estimators: 250
+  subsample: 0.502371441006814
+
 paths:
-    logs_dir: logs/
+  logs_dir: logs/
+  raw_data: data/raw/Student_performance_data_.csv
