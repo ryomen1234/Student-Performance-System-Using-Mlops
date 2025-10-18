@@ -1,0 +1,10 @@
+2025-10-15 18-48-43 - INFO - data loaded successfully from: E:\project\Student-Performance-System-Using-Mlops\data\raw\Student_performance_data _.csv
+2025-10-15 18-48-43 - ERROR - Some unexpected error occured: "['StudnetID'] not found in axis"
+2025-10-15 18-48-43 - INFO - Some unexpected error occured.
+2025-10-15 18-49-20 - INFO - data loaded successfully from: E:\project\Student-Performance-System-Using-Mlops\data\raw\Student_performance_data _.csv
+2025-10-15 18-49-20 - INFO - unwanted features removed successfully.
+2025-10-15 18-49-20 - INFO - data split into X and y
+2025-10-15 18-49-20 - INFO - data convetred to numpy array: X dtype: float64, y dtype: float64
+2025-10-15 18-49-20 - INFO - data pre-procssed successfully.
+2025-10-15 18-49-20 - INFO - data path for X, y created.
+2025-10-15 18-49-20 - INFO - X and y stored successfully.

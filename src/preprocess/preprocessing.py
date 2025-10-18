@@ -3,7 +3,7 @@ import numpy as np
 from typing import Tuple
 
 import os
-from utils.logger import get_logger
+from src.utils.logger import get_logger
 
 
 """
@@ -34,7 +34,7 @@ def preprocessing(data: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray]:
     
     """
     try:
-        data.drop(columns=['StudnetID', 'GradeClass'], inplace=True)
+        data.drop(columns=['StudentID', 'GradeClass'], inplace=True)
         logger.info("unwanted features removed successfully.")
 
         X, y = data.drop(columns=['GPA']), data['GPA']
@@ -59,7 +59,7 @@ def main():
 
     try:
 
-        data_path = r"E:\project\Student-Performance-System-Using-Mlops\data\raw\Student_performance_data _.csv"
+        data_path = r"E:\project\Student-Performance-System-Using-Mlops\data\raw\student.csv"
         df = pd.read_csv(data_path)
         logger.info(f"data loaded successfully from: {data_path}")
 

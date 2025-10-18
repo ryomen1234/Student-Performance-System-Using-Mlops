@@ -6,4 +6,5 @@ parameter:
 
 paths:
   logs_dir: logs/
-  raw_data: data/raw/Student_performance_data_.csv
+  raw_data: data/raw/studet.csv
+  model_path: models/model.joblib
