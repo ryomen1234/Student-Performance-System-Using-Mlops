@@ -1,0 +1,80 @@
+2025-10-18 12-36-13 - INFO - Configuration loaded successfully.
+2025-10-18 12-36-13 - INFO - Feature and label data loaded successfully.
+2025-10-18 12-36-13 - INFO - Configuration loaded successfully.
+2025-10-18 12-36-13 - INFO - Loading trained model...
+2025-10-18 12-36-13 - INFO - Model loaded successfully: GradientBoostingRegressor
+2025-10-18 12-36-13 - INFO - Starting model evaluation...
+2025-10-18 12-36-18 - INFO - ========== Model Evaluation ==========
+2025-10-18 12-36-18 - INFO - Cross-validation MAE: 0.1904
+2025-10-18 12-36-18 - ERROR - Unexpected error during evaluation: ('cannot represent an object', np.float64(0.1904))
+Traceback (most recent call last):
+  File "E:\project\Student-Performance-System-Using-Mlops\src\evaluate.py", line 63, in evaluate
+    yaml.safe_dump(metrics, f)
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\__init__.py", line 269, in safe_dump
+    return dump_all([data], stream, Dumper=SafeDumper, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\__init__.py", line 241, in dump_all
+    dumper.represent(data)
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 27, in represent
+    node = self.represent_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 48, in represent_data
+    node = self.yaml_representers[data_types[0]](self, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 207, in represent_dict
+    return self.represent_mapping('tag:yaml.org,2002:map', data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 118, in represent_mapping
+    node_value = self.represent_data(item_value)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 58, in represent_data
+    node = self.yaml_representers[None](self, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 231, in represent_undefined
+    raise RepresenterError("cannot represent an object", data)
+yaml.representer.RepresenterError: ('cannot represent an object', np.float64(0.1904))
+2025-10-18 12-36-18 - ERROR - Evaluation pipeline failed: ('cannot represent an object', np.float64(0.1904))
+Traceback (most recent call last):
+  File "E:\project\Student-Performance-System-Using-Mlops\src\evaluate.py", line 81, in main
+    evaluate(X, y)
+  File "E:\project\Student-Performance-System-Using-Mlops\src\evaluate.py", line 63, in evaluate
+    yaml.safe_dump(metrics, f)
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\__init__.py", line 269, in safe_dump
+    return dump_all([data], stream, Dumper=SafeDumper, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\__init__.py", line 241, in dump_all
+    dumper.represent(data)
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 27, in represent
+    node = self.represent_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 48, in represent_data
+    node = self.yaml_representers[data_types[0]](self, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 207, in represent_dict
+    return self.represent_mapping('tag:yaml.org,2002:map', data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 118, in represent_mapping
+    node_value = self.represent_data(item_value)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 58, in represent_data
+    node = self.yaml_representers[None](self, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\project\Student-Performance-System-Using-Mlops\myenv\Lib\site-packages\yaml\representer.py", line 231, in represent_undefined
+    raise RepresenterError("cannot represent an object", data)
+yaml.representer.RepresenterError: ('cannot represent an object', np.float64(0.1904))
+2025-10-18 12-40-54 - INFO - Configuration loaded successfully.
+2025-10-18 12-40-54 - INFO - Feature and label data loaded successfully.
+2025-10-18 12-40-54 - INFO - Configuration loaded successfully.
+2025-10-18 12-40-54 - INFO - Loading trained model...
+2025-10-18 12-40-55 - INFO - Model loaded successfully: GradientBoostingRegressor
+2025-10-18 12-40-55 - INFO - Starting model evaluation...
+2025-10-18 12-40-59 - INFO - ========== Model Evaluation ==========
+2025-10-18 12-40-59 - INFO - Cross-validation MAE: 0.1865
+2025-10-18 12-43-44 - INFO - Configuration loaded successfully.
+2025-10-18 12-43-44 - INFO - Feature and label data loaded successfully.
+2025-10-18 12-43-44 - INFO - Configuration loaded successfully.
+2025-10-18 12-43-44 - INFO - Loading trained model...
+2025-10-18 12-43-44 - INFO - Model loaded successfully: GradientBoostingRegressor
+2025-10-18 12-43-44 - INFO - Starting model evaluation...
+2025-10-18 12-43-49 - INFO - ========== Model Evaluation ==========
+2025-10-18 12-43-49 - INFO - Cross-validation MAE: 0.1890

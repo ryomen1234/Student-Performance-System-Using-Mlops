@@ -1,8 +1,23 @@
 stages:
   preprocessing:
-    cmd: src.preprocessing.py
+    cmd: python -m src.preprocessing
     deps:
     - data/raw
     - src/preprocessing.py
     outs:
-    - "data/preprocess\npython"
+    - data/preprocess
+
+  training:
+    cmd: python -m src.train
+    deps:
+    - data/preprocess/features.npy
+    - data/preprocess/labels.npy
+    - src/train.py
+    outs:
+    - models/
+  evaluation:
+    cmd: python -m src.evaluate
+    deps:
+    - data/preprocess/features.npy
+    - data/preprocess/labels.npy
+    - models/model.joblib

@@ -1,0 +1,56 @@
+schema: '2.0'
+stages:
+  preprocessing:
+    cmd: python -m src.preprocessing
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: 3b92a9dbaee573204ff639f34e3b0cea.dir
+      size: 166901
+      nfiles: 1
+    - path: src/preprocessing.py
+      hash: md5
+      md5: b5988d480ab892d4a690dbe66bc8e166
+      size: 2241
+    outs:
+    - path: data/preprocess
+      hash: md5
+      md5: 47ba9e7dd1f9eb71961cdb3282d3e2d0.dir
+      size: 249024
+      nfiles: 2
+  training:
+    cmd: python -m src.train
+    deps:
+    - path: data/preprocess/features.npy
+      hash: md5
+      md5: 24036fa17154a8deb92068fb000b0f80
+      size: 229760
+    - path: data/preprocess/labels.npy
+      hash: md5
+      md5: 6a2d6447a84322ad39158e808e2e064e
+      size: 19264
+    - path: src/train.py
+      hash: md5
+      md5: ec9604f3b60941521f26eac2e98b3d14
+      size: 1328
+    outs:
+    - path: models/
+      hash: md5
+      md5: 67f92c46a19331b38bb9575dc960b702.dir
+      size: 1098968
+      nfiles: 1
+  evaluation:
+    cmd: python -m src.evaluate
+    deps:
+    - path: data/preprocess/features.npy
+      hash: md5
+      md5: 24036fa17154a8deb92068fb000b0f80
+      size: 229760
+    - path: data/preprocess/labels.npy
+      hash: md5
+      md5: 6a2d6447a84322ad39158e808e2e064e
+      size: 19264
+    - path: models/model.joblib
+      hash: md5
+      md5: 61759afe94640f5c7f3857a5bf7ca3e7
+      size: 1098968

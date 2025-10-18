@@ -1,10 +1,15 @@
-parameter:
+parameters:
   learning_rate: 0.1605192295064776
   max_depth: 5
   n_estimators: 250
   subsample: 0.502371441006814
+  random_state: 42
 
 paths:
   logs_dir: logs/
-  raw_data: data/raw/studet.csv
+  raw_data: data/raw/student.csv
+  model_dir: models/
   model_path: models/model.joblib
+  feature: data/preprocess/features.npy
+  labels: data/preprocess/labels.npy
+  metrics_path: metrics.json
